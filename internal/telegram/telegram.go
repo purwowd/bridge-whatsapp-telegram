@@ -26,7 +26,10 @@ func StartTelegramBot(cfg *config.Config) {
 
 		if update.Message.Text != "" {
 			whatsappNumber := fmt.Sprintf("whatsapp:%s", cfg.TwilioWhatsAppNumber)
-			twilio.SendWhatsAppMessage(cfg, whatsappNumber, update.Message.Text)
+			err := twilio.SendWhatsAppMessage(cfg, whatsappNumber, update.Message.Text)
+			if err != nil {
+				return
+			}
 		}
 	}
 }

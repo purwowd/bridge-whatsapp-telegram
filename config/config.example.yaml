@@ -1,0 +1,10 @@
+telegram:
+  token: YOUR_TELEGRAM_BOT_TOKEN
+  chat_id: YOUR_TELEGRAM_CHAT_ID
+
+twilio:
+  account_sid: YOUR_TWILIO_ACCOUNT_SID
+  auth_token: YOUR_TWILIO_AUTH_TOKEN
+  whatsapp_number: YOUR_TWILIO_WHATSAPP_NUMBER
+
+listen_address: :8080
